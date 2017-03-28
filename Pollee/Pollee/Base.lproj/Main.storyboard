@@ -156,21 +156,21 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iM-oY-Zf4" userLabel="Images">
                                             <rect key="frame" x="0.0" y="64" width="375" height="376"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v78-lf-SuO">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger" translatesAutoresizingMaskIntoConstraints="NO" id="v78-lf-SuO">
                                                     <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
                                                     <color key="backgroundColor" red="0.29214238910000001" green="1" blue="0.33403001519999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="v78-lf-SuO" secondAttribute="height" multiplier="1:1" id="wf7-gd-YGO"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sHF-cb-Fl9">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steak" translatesAutoresizingMaskIntoConstraints="NO" id="sHF-cb-Fl9">
                                                     <rect key="frame" x="187" y="0.0" width="187.5" height="187.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="sHF-cb-Fl9" secondAttribute="height" multiplier="1:1" id="n4p-al-QCe"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V4T-Ew-LtY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salmon" translatesAutoresizingMaskIntoConstraints="NO" id="V4T-Ew-LtY">
                                                     <rect key="frame" x="0.0" y="188" width="187.5" height="187.5"/>
                                                     <color key="backgroundColor" red="0.74117647060000003" green="0.76470588240000004" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -201,7 +201,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S88-mF-IwK">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad" translatesAutoresizingMaskIntoConstraints="NO" id="S88-mF-IwK">
                                                     <rect key="frame" x="187" y="188" width="187.5" height="187.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -522,9 +522,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="burger" width="275" height="183"/>
         <image name="comment-icon" width="100" height="100"/>
         <image name="heart-icon" width="104" height="104"/>
         <image name="propic1" width="960" height="960"/>
+        <image name="salad" width="617" height="347"/>
+        <image name="salmon" width="1920" height="1080"/>
         <image name="share-icon" width="104" height="104"/>
+        <image name="steak" width="990" height="594"/>
     </resources>
 </document>

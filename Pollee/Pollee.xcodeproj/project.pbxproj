@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAD4484F1E8AE96400220BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4484E1E8AE96400220BF7 /* main.m */; };
+		FAD448521E8AE96400220BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD448511E8AE96400220BF7 /* AppDelegate.m */; };
+		FAD448551E8AE96400220BF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD448541E8AE96400220BF7 /* ViewController.m */; };
+		FAD448581E8AE96400220BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD448561E8AE96400220BF7 /* Main.storyboard */; };
+		FAD4485A1E8AE96400220BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD448591E8AE96400220BF7 /* Assets.xcassets */; };
+		FAD4485D1E8AE96400220BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD4485B1E8AE96400220BF7 /* LaunchScreen.storyboard */; };
+		FAD448681E8AE96400220BF7 /* PolleeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD448671E8AE96400220BF7 /* PolleeTests.m */; };
+		FAD448731E8AE96400220BF7 /* PolleeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD448721E8AE96400220BF7 /* PolleeUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAD448641E8AE96400220BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD448421E8AE96400220BF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAD448491E8AE96400220BF7;
+			remoteInfo = Pollee;
+		};
+		FAD4486F1E8AE96400220BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAD448421E8AE96400220BF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAD448491E8AE96400220BF7;
+			remoteInfo = Pollee;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FAD4484A1E8AE96400220BF7 /* Pollee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pollee.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD4484E1E8AE96400220BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAD448501E8AE96400220BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAD448511E8AE96400220BF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAD448531E8AE96400220BF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAD448541E8AE96400220BF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAD448571E8AE96400220BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAD448591E8AE96400220BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAD4485C1E8AE96400220BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAD4485E1E8AE96400220BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD448631E8AE96400220BF7 /* PolleeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolleeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD448671E8AE96400220BF7 /* PolleeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolleeTests.m; sourceTree = "<group>"; };
+		FAD448691E8AE96400220BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD4486E1E8AE96400220BF7 /* PolleeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolleeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD448721E8AE96400220BF7 /* PolleeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PolleeUITests.m; sourceTree = "<group>"; };
+		FAD448741E8AE96400220BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAD448471E8AE96400220BF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD448601E8AE96400220BF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD4486B1E8AE96400220BF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAD448411E8AE96400220BF7 = {
+			isa = PBXGroup;
+			children = (
+				FAD4484C1E8AE96400220BF7 /* Pollee */,
+				FAD448661E8AE96400220BF7 /* PolleeTests */,
+				FAD448711E8AE96400220BF7 /* PolleeUITests */,
+				FAD4484B1E8AE96400220BF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAD4484B1E8AE96400220BF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4484A1E8AE96400220BF7 /* Pollee.app */,
+				FAD448631E8AE96400220BF7 /* PolleeTests.xctest */,
+				FAD4486E1E8AE96400220BF7 /* PolleeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAD4484C1E8AE96400220BF7 /* Pollee */ = {
+			isa = PBXGroup;
+			children = (
+				FAD448501E8AE96400220BF7 /* AppDelegate.h */,
+				FAD448511E8AE96400220BF7 /* AppDelegate.m */,
+				FAD448531E8AE96400220BF7 /* ViewController.h */,
+				FAD448541E8AE96400220BF7 /* ViewController.m */,
+				FAD448561E8AE96400220BF7 /* Main.storyboard */,
+				FAD448591E8AE96400220BF7 /* Assets.xcassets */,
+				FAD4485B1E8AE96400220BF7 /* LaunchScreen.storyboard */,
+				FAD4485E1E8AE96400220BF7 /* Info.plist */,
+				FAD4484D1E8AE96400220BF7 /* Supporting Files */,
+			);
+			path = Pollee;
+			sourceTree = "<group>";
+		};
+		FAD4484D1E8AE96400220BF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4484E1E8AE96400220BF7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD448661E8AE96400220BF7 /* PolleeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAD448671E8AE96400220BF7 /* PolleeTests.m */,
+				FAD448691E8AE96400220BF7 /* Info.plist */,
+			);
+			path = PolleeTests;
+			sourceTree = "<group>";
+		};
+		FAD448711E8AE96400220BF7 /* PolleeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAD448721E8AE96400220BF7 /* PolleeUITests.m */,
+				FAD448741E8AE96400220BF7 /* Info.plist */,
+			);
+			path = PolleeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAD448491E8AE96400220BF7 /* Pollee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD448771E8AE96500220BF7 /* Build configuration list for PBXNativeTarget "Pollee" */;
+			buildPhases = (
+				FAD448461E8AE96400220BF7 /* Sources */,
+				FAD448471E8AE96400220BF7 /* Frameworks */,
+				FAD448481E8AE96400220BF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pollee;
+			productName = Pollee;
+			productReference = FAD4484A1E8AE96400220BF7 /* Pollee.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAD448621E8AE96400220BF7 /* PolleeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD4487A1E8AE96500220BF7 /* Build configuration list for PBXNativeTarget "PolleeTests" */;
+			buildPhases = (
+				FAD4485F1E8AE96400220BF7 /* Sources */,
+				FAD448601E8AE96400220BF7 /* Frameworks */,
+				FAD448611E8AE96400220BF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAD448651E8AE96400220BF7 /* PBXTargetDependency */,
+			);
+			name = PolleeTests;
+			productName = PolleeTests;
+			productReference = FAD448631E8AE96400220BF7 /* PolleeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAD4486D1E8AE96400220BF7 /* PolleeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAD4487D1E8AE96500220BF7 /* Build configuration list for PBXNativeTarget "PolleeUITests" */;
+			buildPhases = (
+				FAD4486A1E8AE96400220BF7 /* Sources */,
+				FAD4486B1E8AE96400220BF7 /* Frameworks */,
+				FAD4486C1E8AE96400220BF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAD448701E8AE96400220BF7 /* PBXTargetDependency */,
+			);
+			name = PolleeUITests;
+			productName = PolleeUITests;
+			productReference = FAD4486E1E8AE96400220BF7 /* PolleeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAD448421E8AE96400220BF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Alex Krush";
+				TargetAttributes = {
+					FAD448491E8AE96400220BF7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					FAD448621E8AE96400220BF7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAD448491E8AE96400220BF7;
+					};
+					FAD4486D1E8AE96400220BF7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAD448491E8AE96400220BF7;
+					};
+				};
+			};
+			buildConfigurationList = FAD448451E8AE96400220BF7 /* Build configuration list for PBXProject "Pollee" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAD448411E8AE96400220BF7;
+			productRefGroup = FAD4484B1E8AE96400220BF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAD448491E8AE96400220BF7 /* Pollee */,
+				FAD448621E8AE96400220BF7 /* PolleeTests */,
+				FAD4486D1E8AE96400220BF7 /* PolleeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAD448481E8AE96400220BF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD4485D1E8AE96400220BF7 /* LaunchScreen.storyboard in Resources */,
+				FAD4485A1E8AE96400220BF7 /* Assets.xcassets in Resources */,
+				FAD448581E8AE96400220BF7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD448611E8AE96400220BF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD4486C1E8AE96400220BF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAD448461E8AE96400220BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD448551E8AE96400220BF7 /* ViewController.m in Sources */,
+				FAD448521E8AE96400220BF7 /* AppDelegate.m in Sources */,
+				FAD4484F1E8AE96400220BF7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD4485F1E8AE96400220BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD448681E8AE96400220BF7 /* PolleeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD4486A1E8AE96400220BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD448731E8AE96400220BF7 /* PolleeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAD448651E8AE96400220BF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAD448491E8AE96400220BF7 /* Pollee */;
+			targetProxy = FAD448641E8AE96400220BF7 /* PBXContainerItemProxy */;
+		};
+		FAD448701E8AE96400220BF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAD448491E8AE96400220BF7 /* Pollee */;
+			targetProxy = FAD4486F1E8AE96400220BF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAD448561E8AE96400220BF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAD448571E8AE96400220BF7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAD4485B1E8AE96400220BF7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAD4485C1E8AE96400220BF7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAD448751E8AE96500220BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAD448761E8AE96500220BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAD448781E8AE96500220BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Pollee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.Pollee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FAD448791E8AE96500220BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Pollee/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.Pollee;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FAD4487B1E8AE96500220BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PolleeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.PolleeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pollee.app/Pollee";
+			};
+			name = Debug;
+		};
+		FAD4487C1E8AE96500220BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PolleeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.PolleeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pollee.app/Pollee";
+			};
+			name = Release;
+		};
+		FAD4487E1E8AE96500220BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PolleeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.PolleeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Pollee;
+			};
+			name = Debug;
+		};
+		FAD4487F1E8AE96500220BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PolleeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.PolleeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Pollee;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAD448451E8AE96400220BF7 /* Build configuration list for PBXProject "Pollee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD448751E8AE96500220BF7 /* Debug */,
+				FAD448761E8AE96500220BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAD448771E8AE96500220BF7 /* Build configuration list for PBXNativeTarget "Pollee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD448781E8AE96500220BF7 /* Debug */,
+				FAD448791E8AE96500220BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FAD4487A1E8AE96500220BF7 /* Build configuration list for PBXNativeTarget "PolleeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD4487B1E8AE96500220BF7 /* Debug */,
+				FAD4487C1E8AE96500220BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FAD4487D1E8AE96500220BF7 /* Build configuration list for PBXNativeTarget "PolleeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAD4487E1E8AE96500220BF7 /* Debug */,
+				FAD4487F1E8AE96500220BF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAD448421E8AE96400220BF7 /* Project object */;
+}

@@ -10,6 +10,7 @@
 		13CB7BA25F73D75D421E284E /* libPods-PolleeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C74586BE411018DD4CA4A3 /* libPods-PolleeTests.a */; };
 		C4103064605FB00D05596AFA /* libPods-Pollee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B81F8E87BF27D231F195F1 /* libPods-Pollee.a */; };
 		D6851DACA8490836BF6FF711 /* libPods-PolleeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DA2906E7533692BC5465FD /* libPods-PolleeUITests.a */; };
+		FACD49E01E8AF1AF00C48C7E /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD49DF1E8AF1AF00C48C7E /* FeedTableViewController.m */; };
 		FAD4484F1E8AE96400220BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4484E1E8AE96400220BF7 /* main.m */; };
 		FAD448521E8AE96400220BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD448511E8AE96400220BF7 /* AppDelegate.m */; };
 		FAD448551E8AE96400220BF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD448541E8AE96400220BF7 /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		D095D5042DD4AFA582D70058 /* Pods-PolleeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolleeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolleeUITests/Pods-PolleeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E328186D605B53F77CE2EC60 /* Pods-PolleeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolleeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolleeTests/Pods-PolleeTests.release.xcconfig"; sourceTree = "<group>"; };
 		F1424A8D2317037B4A61A0D5 /* Pods-Pollee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pollee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pollee/Pods-Pollee.debug.xcconfig"; sourceTree = "<group>"; };
+		FACD49DE1E8AF1AF00C48C7E /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		FACD49DF1E8AF1AF00C48C7E /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		FAD4484A1E8AE96400220BF7 /* Pollee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pollee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD4484E1E8AE96400220BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAD448501E8AE96400220BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				FAD4485B1E8AE96400220BF7 /* LaunchScreen.storyboard */,
 				FAD4485E1E8AE96400220BF7 /* Info.plist */,
 				FAD4484D1E8AE96400220BF7 /* Supporting Files */,
+				FACD49DE1E8AF1AF00C48C7E /* FeedTableViewController.h */,
+				FACD49DF1E8AF1AF00C48C7E /* FeedTableViewController.m */,
 			);
 			path = Pollee;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				FAD448551E8AE96400220BF7 /* ViewController.m in Sources */,
 				FAD448521E8AE96400220BF7 /* AppDelegate.m in Sources */,
 				FAD4484F1E8AE96400220BF7 /* main.m in Sources */,
+				FACD49E01E8AF1AF00C48C7E /* FeedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,8 +617,10 @@
 			baseConfigurationReference = F1424A8D2317037B4A61A0D5 /* Pods-Pollee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 5KNY9RDSC4;
 				INFOPLIST_FILE = Pollee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.Pollee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -624,8 +632,10 @@
 			baseConfigurationReference = 3E81CB71E13D112376A10736 /* Pods-Pollee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 5KNY9RDSC4;
 				INFOPLIST_FILE = Pollee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.Pollee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -701,6 +711,7 @@
 				FAD448791E8AE96500220BF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAD4487A1E8AE96500220BF7 /* Build configuration list for PBXNativeTarget "PolleeTests" */ = {
 			isa = XCConfigurationList;
@@ -709,6 +720,7 @@
 				FAD4487C1E8AE96500220BF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAD4487D1E8AE96500220BF7 /* Build configuration list for PBXNativeTarget "PolleeUITests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +729,7 @@
 				FAD4487F1E8AE96500220BF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

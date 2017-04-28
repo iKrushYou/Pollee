@@ -7,6 +7,11 @@ target 'Pollee' do
 
   # Pods for Pollee
 
+  pod 'Mantle'
+  pod 'Overcoat'
+  pod 'AsyncImageView'
+  pod 'MBProgressHUD'
+
   target 'PolleeTests' do
     inherit! :search_paths
     # Pods for testing

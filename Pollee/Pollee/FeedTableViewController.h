@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PollPhotoView.h"
 
-@interface FeedTableViewController : UITableViewController
+@interface FeedTableViewController : UITableViewController <PollPhotoViewDelegate>
+- (IBAction)shareAction:(id)sender;
 
 @end

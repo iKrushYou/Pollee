@@ -4,6 +4,31 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AsyncImageView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Mantle.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Overcoat.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Pollee.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +57,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>760857B66762A9385735B42E3532D0E3</key>
+		<key>586F2DFA9BDCC6675C2546793A69E5CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5EEED41AB881E4A0C271299EBB9CD411</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66146E59F7A932EE8EDF443189F22972</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E2F85A9EA167EFA71B3DCB5DF170059</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9F9FE4B20388451ECDA19C664A562079</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E911F3A6E4A54E1B3B10659E078E3173</key>
 		<dict>
 			<key>primary</key>
 			<true/>

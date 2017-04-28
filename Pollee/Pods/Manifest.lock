@@ -1,3 +1,46 @@
-PODFILE CHECKSUM: 97399958224e303bc9e1dd8fec2b380bc971ce13
+PODS:
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AsyncImageView (1.6)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
+  - MBProgressHUD (1.0.0)
+  - Overcoat (3.2.1):
+    - Overcoat/NSURLConnection (= 3.2.1)
+    - Overcoat/NSURLSession (= 3.2.1)
+  - Overcoat/Core (3.2.1):
+    - AFNetworking/Serialization
+    - Mantle
+  - Overcoat/NSURLConnection (3.2.1):
+    - AFNetworking/NSURLConnection
+    - Overcoat/Core
+  - Overcoat/NSURLSession (3.2.1):
+    - AFNetworking/NSURLSession
+    - Overcoat/Core
+
+DEPENDENCIES:
+  - AsyncImageView
+  - Mantle
+  - MBProgressHUD
+  - Overcoat
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AsyncImageView: 416e99402e5b1f20571de70ad619ced90f56a7d9
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Overcoat: ce2bd0bfee6e300839cb244799c9e1e1aa70c06a
+
+PODFILE CHECKSUM: 7e736e4e5ac79d776e89a360636d55d0b649a0a9
 
 COCOAPODS: 1.2.0

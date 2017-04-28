@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13CB7BA25F73D75D421E284E /* libPods-PolleeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C74586BE411018DD4CA4A3 /* libPods-PolleeTests.a */; };
-		C4103064605FB00D05596AFA /* libPods-Pollee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B81F8E87BF27D231F195F1 /* libPods-Pollee.a */; };
-		D6851DACA8490836BF6FF711 /* libPods-PolleeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DA2906E7533692BC5465FD /* libPods-PolleeUITests.a */; };
+		13A37D2BB36F347CA05F4543 /* libPods-Pollee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB7D1BB92E20280418F6113 /* libPods-Pollee.a */; };
+		A1A6ED8EF3E8E59F3ED0BA06 /* libPods-PolleeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6D0B6FE3D47DCED489CA1 /* libPods-PolleeTests.a */; };
+		C21D634DE3E011EBB031DD5C /* libPods-PolleeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C21207FFA8724075D771DCE /* libPods-PolleeUITests.a */; };
+		FA037EC01EAEC0EE00E168E2 /* PLPost.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037EBF1EAEC0EE00E168E2 /* PLPost.m */; };
+		FA037EC91EAED4E800E168E2 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037EC81EAED4E800E168E2 /* APIClient.m */; };
+		FA037ECC1EAED82C00E168E2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037ECB1EAED82C00E168E2 /* LoginViewController.m */; };
+		FA037ECF1EAEE13400E168E2 /* PLPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037ECE1EAEE13400E168E2 /* PLPhoto.m */; };
+		FA037ED21EAEEC9800E168E2 /* CommentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037ED11EAEEC9800E168E2 /* CommentsTableViewController.m */; };
+		FA037ED51EAEED7700E168E2 /* PLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037ED41EAEED7700E168E2 /* PLComment.m */; };
+		FA037ED81EAF05D100E168E2 /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037ED71EAF05D100E168E2 /* CreatePollViewController.m */; };
+		FA037EDB1EAF228000E168E2 /* PLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037EDA1EAF228000E168E2 /* PLUser.m */; };
+		FA532EFC1EB1DC840009E90B /* PLVote.m in Sources */ = {isa = PBXBuildFile; fileRef = FA532EFB1EB1DC840009E90B /* PLVote.m */; };
+		FA7ADF2B1EA8543400E9857B /* ProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7ADF2A1EA8543400E9857B /* ProfileCollectionViewController.m */; };
+		FA7ADF2D1EA8578F00E9857B /* PollPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7ADF2C1EA8578F00E9857B /* PollPhotoView.xib */; };
+		FA7ADF301EA8580B00E9857B /* PollPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7ADF2F1EA8580B00E9857B /* PollPhotoView.m */; };
+		FAB40C6C1EAB01CF00FA88FA /* FollowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40C6B1EAB01CF00FA88FA /* FollowTableViewController.m */; };
+		FAB40C6F1EAB066500FA88FA /* RoundedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB40C6E1EAB066500FA88FA /* RoundedImageView.m */; };
 		FACD49E01E8AF1AF00C48C7E /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD49DF1E8AF1AF00C48C7E /* FeedTableViewController.m */; };
 		FAD4484F1E8AE96400220BF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4484E1E8AE96400220BF7 /* main.m */; };
 		FAD448521E8AE96400220BF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD448511E8AE96400220BF7 /* AppDelegate.m */; };
-		FAD448551E8AE96400220BF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD448541E8AE96400220BF7 /* ViewController.m */; };
 		FAD448581E8AE96400220BF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD448561E8AE96400220BF7 /* Main.storyboard */; };
 		FAD4485A1E8AE96400220BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD448591E8AE96400220BF7 /* Assets.xcassets */; };
 		FAD4485D1E8AE96400220BF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD4485B1E8AE96400220BF7 /* LaunchScreen.storyboard */; };
@@ -39,23 +52,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C21207FFA8724075D771DCE /* libPods-PolleeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolleeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA5EF309837FD0698C70A8B /* Pods-PolleeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolleeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolleeUITests/Pods-PolleeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E81CB71E13D112376A10736 /* Pods-Pollee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pollee.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pollee/Pods-Pollee.release.xcconfig"; sourceTree = "<group>"; };
-		42B81F8E87BF27D231F195F1 /* libPods-Pollee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pollee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		55C74586BE411018DD4CA4A3 /* libPods-PolleeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolleeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7472C32555B424D63593E4F5 /* Pods-PolleeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolleeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolleeTests/Pods-PolleeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		90DA2906E7533692BC5465FD /* libPods-PolleeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolleeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB7D1BB92E20280418F6113 /* libPods-Pollee.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pollee.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D095D5042DD4AFA582D70058 /* Pods-PolleeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolleeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolleeUITests/Pods-PolleeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E328186D605B53F77CE2EC60 /* Pods-PolleeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolleeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolleeTests/Pods-PolleeTests.release.xcconfig"; sourceTree = "<group>"; };
+		ECF6D0B6FE3D47DCED489CA1 /* libPods-PolleeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolleeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1424A8D2317037B4A61A0D5 /* Pods-Pollee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pollee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pollee/Pods-Pollee.debug.xcconfig"; sourceTree = "<group>"; };
+		FA037EBE1EAEC0EE00E168E2 /* PLPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPost.h; sourceTree = "<group>"; };
+		FA037EBF1EAEC0EE00E168E2 /* PLPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPost.m; sourceTree = "<group>"; };
+		FA037EC71EAED4E800E168E2 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		FA037EC81EAED4E800E168E2 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		FA037ECA1EAED82C00E168E2 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		FA037ECB1EAED82C00E168E2 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		FA037ECD1EAEE13400E168E2 /* PLPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPhoto.h; sourceTree = "<group>"; };
+		FA037ECE1EAEE13400E168E2 /* PLPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPhoto.m; sourceTree = "<group>"; };
+		FA037ED01EAEEC9800E168E2 /* CommentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentsTableViewController.h; sourceTree = "<group>"; };
+		FA037ED11EAEEC9800E168E2 /* CommentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentsTableViewController.m; sourceTree = "<group>"; };
+		FA037ED31EAEED7700E168E2 /* PLComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLComment.h; sourceTree = "<group>"; };
+		FA037ED41EAEED7700E168E2 /* PLComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLComment.m; sourceTree = "<group>"; };
+		FA037ED61EAF05D100E168E2 /* CreatePollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePollViewController.h; sourceTree = "<group>"; };
+		FA037ED71EAF05D100E168E2 /* CreatePollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePollViewController.m; sourceTree = "<group>"; };
+		FA037ED91EAF228000E168E2 /* PLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLUser.h; sourceTree = "<group>"; };
+		FA037EDA1EAF228000E168E2 /* PLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLUser.m; sourceTree = "<group>"; };
+		FA532EFA1EB1DC840009E90B /* PLVote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVote.h; sourceTree = "<group>"; };
+		FA532EFB1EB1DC840009E90B /* PLVote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVote.m; sourceTree = "<group>"; };
+		FA7ADF291EA8543400E9857B /* ProfileCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewController.h; sourceTree = "<group>"; };
+		FA7ADF2A1EA8543400E9857B /* ProfileCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewController.m; sourceTree = "<group>"; };
+		FA7ADF2C1EA8578F00E9857B /* PollPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollPhotoView.xib; sourceTree = "<group>"; };
+		FA7ADF2E1EA8580B00E9857B /* PollPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollPhotoView.h; sourceTree = "<group>"; };
+		FA7ADF2F1EA8580B00E9857B /* PollPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollPhotoView.m; sourceTree = "<group>"; };
+		FAB40C6A1EAB01CF00FA88FA /* FollowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowTableViewController.h; sourceTree = "<group>"; };
+		FAB40C6B1EAB01CF00FA88FA /* FollowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowTableViewController.m; sourceTree = "<group>"; };
+		FAB40C6D1EAB066500FA88FA /* RoundedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedImageView.h; sourceTree = "<group>"; };
+		FAB40C6E1EAB066500FA88FA /* RoundedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedImageView.m; sourceTree = "<group>"; };
 		FACD49DE1E8AF1AF00C48C7E /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		FACD49DF1E8AF1AF00C48C7E /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		FAD4484A1E8AE96400220BF7 /* Pollee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pollee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD4484E1E8AE96400220BF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAD448501E8AE96400220BF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAD448511E8AE96400220BF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FAD448531E8AE96400220BF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FAD448541E8AE96400220BF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FAD448571E8AE96400220BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAD448591E8AE96400220BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD4485C1E8AE96400220BF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4103064605FB00D05596AFA /* libPods-Pollee.a in Frameworks */,
+				13A37D2BB36F347CA05F4543 /* libPods-Pollee.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13CB7BA25F73D75D421E284E /* libPods-PolleeTests.a in Frameworks */,
+				A1A6ED8EF3E8E59F3ED0BA06 /* libPods-PolleeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6851DACA8490836BF6FF711 /* libPods-PolleeUITests.a in Frameworks */,
+				C21D634DE3E011EBB031DD5C /* libPods-PolleeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +137,9 @@
 		B359CC7823343658330BF810 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42B81F8E87BF27D231F195F1 /* libPods-Pollee.a */,
-				55C74586BE411018DD4CA4A3 /* libPods-PolleeTests.a */,
-				90DA2906E7533692BC5465FD /* libPods-PolleeUITests.a */,
+				ABB7D1BB92E20280418F6113 /* libPods-Pollee.a */,
+				ECF6D0B6FE3D47DCED489CA1 /* libPods-PolleeTests.a */,
+				0C21207FFA8724075D771DCE /* libPods-PolleeUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +155,63 @@
 				2EA5EF309837FD0698C70A8B /* Pods-PolleeUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FAB40C701EAB0D2400FA88FA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FACD49DE1E8AF1AF00C48C7E /* FeedTableViewController.h */,
+				FACD49DF1E8AF1AF00C48C7E /* FeedTableViewController.m */,
+				FA7ADF291EA8543400E9857B /* ProfileCollectionViewController.h */,
+				FA7ADF2A1EA8543400E9857B /* ProfileCollectionViewController.m */,
+				FAB40C6A1EAB01CF00FA88FA /* FollowTableViewController.h */,
+				FAB40C6B1EAB01CF00FA88FA /* FollowTableViewController.m */,
+				FA037ECA1EAED82C00E168E2 /* LoginViewController.h */,
+				FA037ECB1EAED82C00E168E2 /* LoginViewController.m */,
+				FA037ED01EAEEC9800E168E2 /* CommentsTableViewController.h */,
+				FA037ED11EAEEC9800E168E2 /* CommentsTableViewController.m */,
+				FA037ED61EAF05D100E168E2 /* CreatePollViewController.h */,
+				FA037ED71EAF05D100E168E2 /* CreatePollViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FAB40C711EAB0D3500FA88FA /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA7ADF2C1EA8578F00E9857B /* PollPhotoView.xib */,
+				FA7ADF2E1EA8580B00E9857B /* PollPhotoView.h */,
+				FA7ADF2F1EA8580B00E9857B /* PollPhotoView.m */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		FAB40C721EAB0D4100FA88FA /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FAB40C6D1EAB066500FA88FA /* RoundedImageView.h */,
+				FAB40C6E1EAB066500FA88FA /* RoundedImageView.m */,
+			);
+			name = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		FAB40C731EAB19E000FA88FA /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FA037EC71EAED4E800E168E2 /* APIClient.h */,
+				FA037EC81EAED4E800E168E2 /* APIClient.m */,
+				FA037EBE1EAEC0EE00E168E2 /* PLPost.h */,
+				FA037EBF1EAEC0EE00E168E2 /* PLPost.m */,
+				FA037ECD1EAEE13400E168E2 /* PLPhoto.h */,
+				FA037ECE1EAEE13400E168E2 /* PLPhoto.m */,
+				FA037ED31EAEED7700E168E2 /* PLComment.h */,
+				FA037ED41EAEED7700E168E2 /* PLComment.m */,
+				FA037ED91EAF228000E168E2 /* PLUser.h */,
+				FA037EDA1EAF228000E168E2 /* PLUser.m */,
+				FA532EFA1EB1DC840009E90B /* PLVote.h */,
+				FA532EFB1EB1DC840009E90B /* PLVote.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		FAD448411E8AE96400220BF7 = {
@@ -144,17 +239,13 @@
 		FAD4484C1E8AE96400220BF7 /* Pollee */ = {
 			isa = PBXGroup;
 			children = (
-				FAD448501E8AE96400220BF7 /* AppDelegate.h */,
-				FAD448511E8AE96400220BF7 /* AppDelegate.m */,
-				FAD448531E8AE96400220BF7 /* ViewController.h */,
-				FAD448541E8AE96400220BF7 /* ViewController.m */,
+				FAB40C731EAB19E000FA88FA /* Objects */,
+				FAB40C701EAB0D2400FA88FA /* View Controllers */,
 				FAD448561E8AE96400220BF7 /* Main.storyboard */,
 				FAD448591E8AE96400220BF7 /* Assets.xcassets */,
-				FAD4485B1E8AE96400220BF7 /* LaunchScreen.storyboard */,
-				FAD4485E1E8AE96400220BF7 /* Info.plist */,
+				FAB40C711EAB0D3500FA88FA /* Custom Views */,
 				FAD4484D1E8AE96400220BF7 /* Supporting Files */,
-				FACD49DE1E8AF1AF00C48C7E /* FeedTableViewController.h */,
-				FACD49DF1E8AF1AF00C48C7E /* FeedTableViewController.m */,
+				FAB40C721EAB0D4100FA88FA /* Custom Classes */,
 			);
 			path = Pollee;
 			sourceTree = "<group>";
@@ -162,6 +253,10 @@
 		FAD4484D1E8AE96400220BF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FAD448501E8AE96400220BF7 /* AppDelegate.h */,
+				FAD448511E8AE96400220BF7 /* AppDelegate.m */,
+				FAD4485B1E8AE96400220BF7 /* LaunchScreen.storyboard */,
+				FAD4485E1E8AE96400220BF7 /* Info.plist */,
 				FAD4484E1E8AE96400220BF7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -303,6 +398,7 @@
 			files = (
 				FAD4485D1E8AE96400220BF7 /* LaunchScreen.storyboard in Resources */,
 				FAD4485A1E8AE96400220BF7 /* Assets.xcassets in Resources */,
+				FA7ADF2D1EA8578F00E9857B /* PollPhotoView.xib in Resources */,
 				FAD448581E8AE96400220BF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,10 +562,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD448551E8AE96400220BF7 /* ViewController.m in Sources */,
+				FA7ADF301EA8580B00E9857B /* PollPhotoView.m in Sources */,
 				FAD448521E8AE96400220BF7 /* AppDelegate.m in Sources */,
 				FAD4484F1E8AE96400220BF7 /* main.m in Sources */,
+				FA037ED81EAF05D100E168E2 /* CreatePollViewController.m in Sources */,
+				FA037EDB1EAF228000E168E2 /* PLUser.m in Sources */,
+				FA037ED51EAEED7700E168E2 /* PLComment.m in Sources */,
+				FAB40C6F1EAB066500FA88FA /* RoundedImageView.m in Sources */,
+				FA037ECC1EAED82C00E168E2 /* LoginViewController.m in Sources */,
+				FA037ED21EAEEC9800E168E2 /* CommentsTableViewController.m in Sources */,
+				FA037EC91EAED4E800E168E2 /* APIClient.m in Sources */,
 				FACD49E01E8AF1AF00C48C7E /* FeedTableViewController.m in Sources */,
+				FA7ADF2B1EA8543400E9857B /* ProfileCollectionViewController.m in Sources */,
+				FA037ECF1EAEE13400E168E2 /* PLPhoto.m in Sources */,
+				FA532EFC1EB1DC840009E90B /* PLVote.m in Sources */,
+				FAB40C6C1EAB01CF00FA88FA /* FollowTableViewController.m in Sources */,
+				FA037EC01EAEC0EE00E168E2 /* PLPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

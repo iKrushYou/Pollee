@@ -19,6 +19,8 @@
 		FA037ED81EAF05D100E168E2 /* CreatePollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037ED71EAF05D100E168E2 /* CreatePollViewController.m */; };
 		FA037EDB1EAF228000E168E2 /* PLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FA037EDA1EAF228000E168E2 /* PLUser.m */; };
 		FA532EFC1EB1DC840009E90B /* PLVote.m in Sources */ = {isa = PBXBuildFile; fileRef = FA532EFB1EB1DC840009E90B /* PLVote.m */; };
+		FA532EFF1EB50E010009E90B /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA532EFE1EB50E010009E90B /* DateFormatter.m */; };
+		FA532F021EB513D00009E90B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA532F011EB513D00009E90B /* RegisterViewController.m */; };
 		FA7ADF2B1EA8543400E9857B /* ProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7ADF2A1EA8543400E9857B /* ProfileCollectionViewController.m */; };
 		FA7ADF2D1EA8578F00E9857B /* PollPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7ADF2C1EA8578F00E9857B /* PollPhotoView.xib */; };
 		FA7ADF301EA8580B00E9857B /* PollPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7ADF2F1EA8580B00E9857B /* PollPhotoView.m */; };
@@ -79,6 +81,10 @@
 		FA037EDA1EAF228000E168E2 /* PLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLUser.m; sourceTree = "<group>"; };
 		FA532EFA1EB1DC840009E90B /* PLVote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVote.h; sourceTree = "<group>"; };
 		FA532EFB1EB1DC840009E90B /* PLVote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVote.m; sourceTree = "<group>"; };
+		FA532EFD1EB50E010009E90B /* DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateFormatter.h; sourceTree = "<group>"; };
+		FA532EFE1EB50E010009E90B /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
+		FA532F001EB513D00009E90B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		FA532F011EB513D00009E90B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		FA7ADF291EA8543400E9857B /* ProfileCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewController.h; sourceTree = "<group>"; };
 		FA7ADF2A1EA8543400E9857B /* ProfileCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewController.m; sourceTree = "<group>"; };
 		FA7ADF2C1EA8578F00E9857B /* PollPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollPhotoView.xib; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 				FAB40C6B1EAB01CF00FA88FA /* FollowTableViewController.m */,
 				FA037ECA1EAED82C00E168E2 /* LoginViewController.h */,
 				FA037ECB1EAED82C00E168E2 /* LoginViewController.m */,
+				FA532F001EB513D00009E90B /* RegisterViewController.h */,
+				FA532F011EB513D00009E90B /* RegisterViewController.m */,
 				FA037ED01EAEEC9800E168E2 /* CommentsTableViewController.h */,
 				FA037ED11EAEEC9800E168E2 /* CommentsTableViewController.m */,
 				FA037ED61EAF05D100E168E2 /* CreatePollViewController.h */,
@@ -191,6 +199,8 @@
 			children = (
 				FAB40C6D1EAB066500FA88FA /* RoundedImageView.h */,
 				FAB40C6E1EAB066500FA88FA /* RoundedImageView.m */,
+				FA532EFD1EB50E010009E90B /* DateFormatter.h */,
+				FA532EFE1EB50E010009E90B /* DateFormatter.m */,
 			);
 			name = "Custom Classes";
 			sourceTree = "<group>";
@@ -570,10 +580,12 @@
 				FA037ED51EAEED7700E168E2 /* PLComment.m in Sources */,
 				FAB40C6F1EAB066500FA88FA /* RoundedImageView.m in Sources */,
 				FA037ECC1EAED82C00E168E2 /* LoginViewController.m in Sources */,
+				FA532EFF1EB50E010009E90B /* DateFormatter.m in Sources */,
 				FA037ED21EAEEC9800E168E2 /* CommentsTableViewController.m in Sources */,
 				FA037EC91EAED4E800E168E2 /* APIClient.m in Sources */,
 				FACD49E01E8AF1AF00C48C7E /* FeedTableViewController.m in Sources */,
 				FA7ADF2B1EA8543400E9857B /* ProfileCollectionViewController.m in Sources */,
+				FA532F021EB513D00009E90B /* RegisterViewController.m in Sources */,
 				FA037ECF1EAEE13400E168E2 /* PLPhoto.m in Sources */,
 				FA532EFC1EB1DC840009E90B /* PLVote.m in Sources */,
 				FAB40C6C1EAB01CF00FA88FA /* FollowTableViewController.m in Sources */,

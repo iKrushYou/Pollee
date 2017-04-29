@@ -12,6 +12,7 @@
 #import "PLPost.h"
 #import <AsyncImageView.h>
 #import <MBProgressHUD.h>
+#import "DateFormatter.h"
 
 @interface CommentsTableViewController () {
     NSArray * comments;
@@ -32,13 +33,22 @@
                             action:@selector(loadComments)
                   forControlEvents:UIControlEventValueChanged];
     
+    [self showLoading];
     [self loadComments];
+    
+    [NSTimer scheduledTimerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [self loadComments];
+    }];
 }
 
-- (void)loadComments {
+- (void)showLoading {
     [hud removeFromSuperview];
     hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [hud setMode:MBProgressHUDModeIndeterminate];
+}
+
+- (void)loadComments {
+    NSArray * oldComments = comments;
     
     NSString * uri = [NSString stringWithFormat:@"posts/%@/comments", _post.id];
     [[APIClient sharedInstance] GET:uri parameters:nil completion:^(OVCResponse *response, NSError *error) {
@@ -46,8 +56,16 @@
         
         [hud hideAnimated:YES];
         [self.tableView.refreshControl endRefreshing];
-        [self.tableView reloadData];
+//        [self.tableView reloadData];
+        if (oldComments.count != comments.count)
+            [_tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     }];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"scrolling");
+    [_commentTextField resignFirstResponder];
+    [self keyboardDidHide:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,10 +90,12 @@
     
     UILabel * nameLabel = [cell viewWithTag:10];
     UILabel * commentLabel = [cell viewWithTag:11];
+    UILabel * dateLabel = [cell viewWithTag:12];
     AsyncImageView * imageView = [cell viewWithTag:20];
     
     [nameLabel setText:[NSString stringWithFormat:@"%@", comment.user.username]];
     [commentLabel setText:comment.message];
+    [dateLabel setText:[DateFormatter dateStringForDate:comment.createdOn]];
     [imageView setImageURL:comment.user.profilePictureUrl];
         
     return cell;
@@ -94,12 +114,11 @@
     return YES;
 }
 
-
 - (void)keyboardDidShow:(NSNotification *)notification {
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    [UIView animateWithDuration:0.2 animations:^{
-        self.commentBottomConstraint.constant = keyboardSize.height;
+    [UIView animateWithDuration:0.1 animations:^{
+        self.commentBottomConstraint.constant = keyboardSize.height - _commentView.frame.size.height;
         [self.view layoutIfNeeded];
     }];
     

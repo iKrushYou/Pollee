@@ -26,6 +26,7 @@
              @"users/#": [PLUser class],
              @"users/#/followers": [PLUser class],
              @"users/#/following": [PLUser class],
+             @"users/#/profile-picture": [PLUser class],
              @"users/#/posts": [PLPost class],
              @"following": [PLUser class],
              @"posts": [PLPost class],

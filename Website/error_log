@@ -1,0 +1,6 @@
+[28-Apr-2017 15:15:23 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 62
+[29-Apr-2017 19:31:56 UTC] PHP Notice:  Undefined index: followee_id in /home/blueligh/public_html/pollee/index.php on line 84
+[29-Apr-2017 19:31:56 UTC] PHP Notice:  Undefined index: follower_id in /home/blueligh/public_html/pollee/index.php on line 84
+[29-Apr-2017 19:32:11 UTC] PHP Notice:  Undefined index: profile_picture_url in /home/blueligh/public_html/pollee/index.php on line 75
+[29-Apr-2017 19:40:54 UTC] PHP Notice:  Undefined index: profile_picture_url in /home/blueligh/public_html/pollee/index.php on line 75
+[29-Apr-2017 19:44:12 UTC] PHP Notice:  Undefined variable: vote in /home/blueligh/public_html/pollee/functions.php on line 150

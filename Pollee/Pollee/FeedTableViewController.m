@@ -13,6 +13,7 @@
 #import "PLPhoto.h"
 #import <AsyncImageView.h>
 #import "CommentsTableViewController.h"
+#import "DateFormatter.h"
 
 @interface FeedTableViewController () {
     NSArray * posts;
@@ -82,7 +83,7 @@
     UILabel * titleLabel = [cell viewWithTag:11];
     [titleLabel setText:post.title];
     UILabel * dateLabel = [cell viewWithTag:12];
-//    [dateLabel setText:post.createdOn];
+    [dateLabel setText:[DateFormatter dateStringForDate:post.createdOn]];
     
     UIView * view = [cell viewWithTag:20];
     [view setBackgroundColor:[UIColor blueColor]];

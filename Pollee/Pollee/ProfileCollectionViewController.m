@@ -136,8 +136,10 @@ static CGFloat cellWidth;
 - (void)updateProfile {
     if ([[APIClient sharedInstance].user.id isEqual:user.id]) {
         [_editProfileButton setHidden:NO];
+        [_changeProPicButton setHidden:NO];
     } else {
         [_editProfileButton setHidden:YES];
+        [_changeProPicButton setHidden:YES];
     }
     
     [_postsCountLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)posts.count]];
@@ -228,4 +230,56 @@ static CGFloat cellWidth;
     }
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    [self uploadImage:chosenImage];
+}
+
+- (void)uploadImage:(UIImage *)image {
+    NSData * imageData = UIImageJPEGRepresentation(image, 0.5);
+    
+    NSString *path = [NSString stringWithFormat:@"%@/upload", [APIClient sharedInstance].baseURL];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager POST:path parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:imageData name:@"newfile" fileName:@"newfile.jpg" mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"[UploadVC] success = %@", responseObject);
+        NSString * url = [((NSDictionary *) responseObject) objectForKey:@"url"];
+        
+        [self setProfilePicture:url];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"[UploadVC] error = %@", error);
+    }];
+}
+
+- (void)setProfilePicture:(NSString *)profilePictureUrl {
+    NSDictionary * parameters = @{
+                                  @"profile_picture_url" : profilePictureUrl
+                                  };
+    
+    NSString * uri = [NSString stringWithFormat:@"users/%@/profile-picture", [APIClient sharedInstance].user.id];
+    [[APIClient sharedInstance] PUT:uri parameters:parameters completion:^(OVCResponse *response, NSError *error) {
+        user = response.result;
+        
+        NSLog(@"response: %@", response);
+        NSLog(@"error: %@", error);
+        
+        [hud hideAnimated:YES];
+        
+        [self updateProfile];
+    }];
+}
+
+- (IBAction)changeProPicAction:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
 @end

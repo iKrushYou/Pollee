@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *commentBottomConstraint;
+@property (weak, nonatomic) IBOutlet UIView *commentView;
 
 @property (strong, nonatomic) PLPost * post;
 - (IBAction)commentAction:(id)sender;

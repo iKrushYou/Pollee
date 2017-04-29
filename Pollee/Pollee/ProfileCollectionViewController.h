@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AsyncImageView.h>
 
-@interface ProfileCollectionViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ProfileCollectionViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 - (IBAction)viewFollowingAction:(id)sender;
@@ -22,5 +22,7 @@
 @property (weak, nonatomic) IBOutlet AsyncImageView *propicImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *editProfileButton;
+- (IBAction)changeProPicAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *changeProPicButton;
 
 @end

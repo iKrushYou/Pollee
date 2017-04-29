@@ -21,6 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +43,8 @@
 */
 
 - (IBAction)loginAction:(id)sender {
+    [self dismissKeyboard];
+    
     hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
     [hud showAnimated:YES];
@@ -62,4 +68,19 @@
         }
     }];
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == _userTextField) {
+        [_passwordTextField becomeFirstResponder];
+    } else {
+        [self loginAction:nil];
+    }
+    
+    return YES;
+}
+
+- (void)dismissKeyboard {
+    [self.view endEditing:YES];
+}
+
 @end

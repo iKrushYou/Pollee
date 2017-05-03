@@ -13,13 +13,35 @@ require 'functions.php';
 
 $app = new \Slim\App;
 
+$app->add(function ($request, $response, $next) {
+	error_log(print_r($request->getHeaderLine('Token'), true), 3, "log.txt");
+
+	$openPaths = array('login', 'register');
+	$path = $request->getUri()->getPath();
+
+	if (!in_array($path, $openPaths)) {
+		if ($request->hasHeader('Token')) {
+			$token = $request->getHeaderLine('Token');
+			$user = getUserForToken($token);
+
+			if (!$user) return $response->withStatus(401)->write('Unauthorized');
+
+			$request = $request->withAttribute("user_id", $user['id']);
+		} else {
+			return $response->withStatus(401)->write('Unauthorized');
+		}
+	} 
+	
+	$response = $next($request, $response);
+	
+	return $response;
+});
+
 $app->get('/', function() {
 	echo '<h1>Home Page</h1>';
 });
 
 $app->post('/upload', function ($request, $response, $args) {
-	error_log(print_r($request, true), 3, "log.txt");
-
     $files = $request->getUploadedFiles();
     if (empty($files['newfile'])) {
         return $response->withStatus(400)->write("file not found");
@@ -40,7 +62,9 @@ $app->post('/upload', function ($request, $response, $args) {
 });
 
 $app->get('/users', function($request, $response, $args) {
-	$users = getUsers();
+	$user_id = $request->getAttribute('user_id');
+
+	$users = getUsersForUser($user_id);
 
 	return $response->withStatus(200)->withHeader('Content-type', 'application/json')->write(json_encode($users, JSON_NUMERIC_CHECK));
 });
@@ -116,7 +140,11 @@ $app->post('/register', function($request, $response, $args) {
 });
 
 $app->get('/posts', function($request, $response, $args) {
-	$posts = getPosts();
+	$params = $request->getQueryParams();
+
+	$user_id = $request->getAttribute('user_id');
+
+	$posts = getPostsForUserFeed($user_id);
 	return $response->withStatus(200)->withHeader('Content-type', 'application/json')->write(json_encode($posts, JSON_NUMERIC_CHECK));
 });
 
@@ -185,6 +213,11 @@ $app->delete('/posts/{id}/comments', function($request, $response, $args) {
 	deleteComment($args['id']);
 
 	return $response->withStatus(200)->withHeader('Content-type', 'application/json')->write(json_encode(array(), JSON_NUMERIC_CHECK));
+});
+
+$app->post('/users/{id}/token', function($request, $response, $args) {
+	$user = resetTokenForUser($args['id']);
+	return $response->withStatus(200)->withHeader('Content-type', 'application/json')->write(json_encode($user, JSON_NUMERIC_CHECK));
 });
 
 

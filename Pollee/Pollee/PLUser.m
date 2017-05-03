@@ -19,6 +19,7 @@
              @"email" : @"email",
              @"privacyPolicy" : @"privacy_policy",
              @"profilePictureUrl" : @"profile_picture_url",
+             @"token" : @"token",
              @"createdOn": @"created_on",
              @"updatedOn": @"updated_on"
              };

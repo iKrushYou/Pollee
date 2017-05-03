@@ -87,7 +87,7 @@
 }
 
 - (void)createPhotoForPost:(PLPost *)post withUrl:(NSString *)url {
-    url = [NSString stringWithFormat:@"%@/%@", [APIClient sharedInstance].baseURL, url];
+    url = [[APIClient baseUrl] stringByAppendingString:url];
     
     NSDictionary * params = @{@"image_url" : url, @"post_id" : post.id, @"caption" : @""};
     
@@ -126,9 +126,10 @@
 - (void)uploadImage:(UIImage *)image {
     NSData * imageData = UIImageJPEGRepresentation(image, 0.5);
     
-    NSString *path = [NSString stringWithFormat:@"%@/upload", [APIClient sharedInstance].baseURL];
+    NSString * path = [[APIClient baseUrl] stringByAppendingString:@"upload"];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager.requestSerializer setValue:[APIClient sharedInstance].user.token forHTTPHeaderField:@"Token"];
     [manager POST:path parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         [formData appendPartWithFileData:imageData name:@"newfile" fileName:@"newfile.jpg" mimeType:@"image/jpeg"];
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {

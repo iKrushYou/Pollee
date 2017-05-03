@@ -11,11 +11,11 @@
 
 @interface APIClient : OVCHTTPSessionManager
 
-+ (instancetype) sharedInstance;
-
 + (NSString *)baseUrl;
 
 @property (strong, nonatomic) NSNumber * userId;
 @property (strong, nonatomic) PLUser * user;
+
++ (APIClient *)sharedInstance;
 
 @end

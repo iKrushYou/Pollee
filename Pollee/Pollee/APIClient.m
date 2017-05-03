@@ -15,7 +15,7 @@
 @implementation APIClient 
 
 + (NSString *)baseUrl {
-    return @"http://bluelightsapp.com/pollee";
+    return @"http://bluelightsapp.com/pollee/";
 }
 
 + (NSDictionary *)modelClassesByResourcePath {
@@ -35,25 +35,30 @@
              };
 }
 
-+ (instancetype)sharedInstance {
-    static id _sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _sharedInstance = [[self alloc] initWithBaseURL:[NSURL URLWithString:[self baseUrl]]];
-    });
-    
-    return _sharedInstance;
+static APIClient * sharedInstance = nil;
+
++ (APIClient *)sharedInstance {
+    if (sharedInstance == nil) {
+        sharedInstance = [[APIClient alloc] initWithUser:nil];
+    }
+    return sharedInstance;
 }
 
-- (void)setUserId:(NSNumber *)userId {
-    _userId = userId;
++ (void)resetSharedInstanceWithUser:(PLUser *)user {
+    sharedInstance = [[APIClient alloc] initWithUser:user];
+}
+
+- (id)initWithUser:(PLUser *)user {
+    self = [super initWithBaseURL:[NSURL URLWithString:[APIClient baseUrl]]];
     
-    APIClient * apiClient = [[APIClient alloc] initWithBaseURL:[NSURL URLWithString:[APIClient baseUrl]]];
+    _user = user;
+    [self.requestSerializer setValue:_user.token forHTTPHeaderField:@"Token"];
     
-    NSString * uri = [NSString stringWithFormat:@"users/%@", userId];
-    [apiClient GET:uri parameters:nil completion:^(OVCResponse *response, NSError *error) {
-        _user = response.result;
-    }];
+    return self;
+}
+
+- (void)setUser:(PLUser *)user {
+    [APIClient resetSharedInstanceWithUser:user];
 }
 
 @end

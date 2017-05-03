@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString * email;
 @property (nonatomic, strong) NSNumber * privacyPolicy;
 @property (nonatomic, strong) NSURL * profilePictureUrl;
+@property (nonatomic, strong) NSString * token;
 @property (nonatomic, strong) NSDate * createdOn;
 @property (nonatomic, strong) NSDate * updatedOn;
 

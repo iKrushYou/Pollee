@@ -58,10 +58,13 @@
         PLUser * user = response.result;
         
         if (!error) {
+            NSLog(@"Response: %@", response);
             [hud hideAnimated:YES];
             [[APIClient sharedInstance] setUser:user];
             [self performSegueWithIdentifier:@"LoginSegue" sender:nil];
         } else {
+            NSLog(@"Response: %@", response);
+            NSLog(@"Error: %@", error);
             hud.mode = MBProgressHUDModeText;
             [hud.label setText:@"Error"];
             [hud hideAnimated:YES afterDelay:0.5];

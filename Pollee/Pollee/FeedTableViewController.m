@@ -43,7 +43,9 @@
 }
 
 - (void)loadPosts {
-    
+    NSLog(@"Headers: %@", [APIClient sharedInstance].requestSerializer.HTTPRequestHeaders);
+    APIClient * client = [APIClient sharedInstance];
+//    [client.requestSerializer setValue:[APIClient sharedInstance].user.token forHTTPHeaderField:@"Token"];
     [[APIClient sharedInstance] GET:@"posts" parameters:nil completion:^(OVCResponse *response, NSError *error) {
         posts = response.result;
         NSLog(@"response: %@", response);
@@ -82,7 +84,9 @@
     
     UILabel * titleLabel = [cell viewWithTag:11];
     [titleLabel setText:post.title];
-    UILabel * dateLabel = [cell viewWithTag:12];
+    UILabel * userLabel = [cell viewWithTag:12];
+    [userLabel setText:[NSString stringWithFormat:@"%@ %@", post.user.firstName, post.user.lastName]];
+    UILabel * dateLabel = [cell viewWithTag:13];
     [dateLabel setText:[DateFormatter dateStringForDate:post.createdOn]];
     
     UIView * view = [cell viewWithTag:20];

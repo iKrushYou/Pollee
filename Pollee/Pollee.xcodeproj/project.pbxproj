@@ -21,6 +21,7 @@
 		FA532EFC1EB1DC840009E90B /* PLVote.m in Sources */ = {isa = PBXBuildFile; fileRef = FA532EFB1EB1DC840009E90B /* PLVote.m */; };
 		FA532EFF1EB50E010009E90B /* DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA532EFE1EB50E010009E90B /* DateFormatter.m */; };
 		FA532F021EB513D00009E90B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA532F011EB513D00009E90B /* RegisterViewController.m */; };
+		FA532F051EB99C0F0009E90B /* EditProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA532F041EB99C0F0009E90B /* EditProfileTableViewController.m */; };
 		FA7ADF2B1EA8543400E9857B /* ProfileCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7ADF2A1EA8543400E9857B /* ProfileCollectionViewController.m */; };
 		FA7ADF2D1EA8578F00E9857B /* PollPhotoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7ADF2C1EA8578F00E9857B /* PollPhotoView.xib */; };
 		FA7ADF301EA8580B00E9857B /* PollPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7ADF2F1EA8580B00E9857B /* PollPhotoView.m */; };
@@ -85,6 +86,8 @@
 		FA532EFE1EB50E010009E90B /* DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateFormatter.m; sourceTree = "<group>"; };
 		FA532F001EB513D00009E90B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		FA532F011EB513D00009E90B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		FA532F031EB99C0F0009E90B /* EditProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileTableViewController.h; sourceTree = "<group>"; };
+		FA532F041EB99C0F0009E90B /* EditProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileTableViewController.m; sourceTree = "<group>"; };
 		FA7ADF291EA8543400E9857B /* ProfileCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileCollectionViewController.h; sourceTree = "<group>"; };
 		FA7ADF2A1EA8543400E9857B /* ProfileCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileCollectionViewController.m; sourceTree = "<group>"; };
 		FA7ADF2C1EA8578F00E9857B /* PollPhotoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollPhotoView.xib; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				FA037ED11EAEEC9800E168E2 /* CommentsTableViewController.m */,
 				FA037ED61EAF05D100E168E2 /* CreatePollViewController.h */,
 				FA037ED71EAF05D100E168E2 /* CreatePollViewController.m */,
+				FA532F031EB99C0F0009E90B /* EditProfileTableViewController.h */,
+				FA532F041EB99C0F0009E90B /* EditProfileTableViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -579,6 +584,7 @@
 				FA037EDB1EAF228000E168E2 /* PLUser.m in Sources */,
 				FA037ED51EAEED7700E168E2 /* PLComment.m in Sources */,
 				FAB40C6F1EAB066500FA88FA /* RoundedImageView.m in Sources */,
+				FA532F051EB99C0F0009E90B /* EditProfileTableViewController.m in Sources */,
 				FA037ECC1EAED82C00E168E2 /* LoginViewController.m in Sources */,
 				FA532EFF1EB50E010009E90B /* DateFormatter.m in Sources */,
 				FA037ED21EAEEC9800E168E2 /* CommentsTableViewController.m in Sources */,
@@ -744,6 +750,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.Pollee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -759,6 +766,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iKrushYou.Pollee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

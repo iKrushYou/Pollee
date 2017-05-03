@@ -53,8 +53,56 @@ function getUsers() {
     }
 }
 
+function getUsersForUser($id) {
+    $sql = 'SELECT id, username, first_name, last_name, email, privacy_policy, profile_picture_url, created_on, updated_on FROM User WHERE id != :id';
+    try {
+        $db = getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+        $stmt->execute();
+        $objs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $db = null;
+
+        return $objs;
+    } catch(PDOException $e) {
+        return array('error' => $e->getMessage()); 
+    }
+}
+
 function getUser($user_id) {
     $sql = 'SELECT id, username, first_name, last_name, email, privacy_policy, profile_picture_url, created_on, updated_on FROM User WHERE id = :user_id LIMIT 1';
+    try {
+        $db = getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $obj = $stmt->fetch(PDO::FETCH_ASSOC);
+        $db = null;
+
+        return $obj;
+    } catch(PDOException $e) {
+        return array('error' => $e->getMessage()); 
+    }
+}
+
+function getUserForToken($token) {
+    $sql = 'SELECT id, username, first_name, last_name, email, privacy_policy, profile_picture_url, created_on, updated_on FROM User WHERE token = :token LIMIT 1';
+    try {
+        $db = getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(":token", $token, PDO::PARAM_STR, 255);
+        $stmt->execute();
+        $obj = $stmt->fetch(PDO::FETCH_ASSOC);
+        $db = null;
+
+        return $obj;
+    } catch(PDOException $e) {
+        return array('error' => $e->getMessage()); 
+    }
+}
+
+function getUserAndToken($user_id) {
+    $sql = 'SELECT id, username, first_name, last_name, email, privacy_policy, profile_picture_url, token, created_on, updated_on FROM User WHERE id = :user_id LIMIT 1';
     try {
         $db = getDB();
         $stmt = $db->prepare($sql);
@@ -102,14 +150,14 @@ function login($username, $password) {
         $user_id = $stmt->fetchColumn();
 
         $db = null;
-    } catch(PDOException $e) {
-        return array('error' => $e->getMessage()); 
-    }
 
-    if (!empty($user_id)) {
-        return getUser($user_id);
-    } else {
-        return array('error' => 'Incorrect credentials.');
+        if (!empty($user_id)) {
+            return getUserAndToken($user_id);
+        } else {
+            return array('error' => 'Incorrect credentials.');
+        }
+    } catch(PDOException $e) {
+        return array('error' => $e->getMessage(), 'username' => $username, 'password' => $password); 
     }
 }
 
@@ -130,6 +178,8 @@ function register($username, $password, $first_name, $last_name, $email) {
         $stmt->execute();
         $id = $db->lastInsertID();
         $db = null;
+
+        resetTokenForUser($id);
 
         return getUser($id);
     } catch(PDOException $e) {
@@ -219,6 +269,41 @@ function getPostsForUser($user_id) {
     }
 }
 
+function getPostsForUserFeed($user_id) {
+    $sql = '
+SELECT id, user_id, title, created_on, updated_on 
+FROM Post 
+
+WHERE user_id = :user_id OR
+    user_id IN (
+        SELECT followee_id
+        FROM Following
+        WHERE follower_id = :user_id AND
+            accepted_on IS NOT null
+        )
+ORDER BY created_on DESC
+    ';
+    try {
+        $db = getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $objs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $db = null;
+
+        for ($i = 0; $i < count($objs); $i++) {
+            $objs[$i]['user'] = getUser($objs[$i]['user_id']);
+            unset($objs[$i]['user_id']);
+            $objs[$i]['photos'] = getPhotosForPost($objs[$i]['id']);
+            $objs[$i]['comments'] = getCommentsForPost($objs[$i]['id']);
+        }
+
+        return $objs;
+    } catch(PDOException $e) {
+        return array('error' => $e->getMessage()); 
+    }
+}
+
 function getFollowersForUser($user_id) {
     $sql = '
     SELECT follower.id, follower.username, follower.first_name, follower.last_name, follower.email, follower.privacy_policy, follower.profile_picture_url, follower.created_on, follower.updated_on 
@@ -266,7 +351,13 @@ function getFollowingForUser($user_id) {
 }
 
 function followUserFromUser($followee_id, $follower_id) {
-    $sql = 'INSERT INTO Following (follower_id, followee_id) VALUES (:follower_id, :followee_id)';
+    $followee = getUser($followee_id);
+    if ($followee['privacy_policy'] == 0) {
+        $sql = 'INSERT INTO Following (follower_id, followee_id, accepted_on) VALUES (:follower_id, :followee_id, current_timestamp)';
+    } else {
+        $sql = 'INSERT INTO Following (follower_id, followee_id) VALUES (:follower_id, :followee_id)';
+    }
+    
     try {
         $db = getDB();
         $stmt = $db->prepare($sql);
@@ -583,26 +674,41 @@ function deleteComment($id) {
     }
 }
 
-// function createVote($user_id, $photo_id) {
-//     $photo = getPhoto($photo_id);
-//     $vote = getVoteForPostUser($photo['post_id'], $user_id);
+function tokenForUser($user_id) {
+    $sql = 'SELECT token FROM User WHERE user_id = :user_id';
+    try {
+        $db = getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $token = $stmt->fetchColumn(PDO::FETCH_ASSOC);
+        $db = null;
 
-//     if ($vote) deleteVote($vote['id']);
+        return array('token' => $token);
+    } catch(PDOException $e) {
+        return array('error' => $e->getMessage()); 
+    }
+}
 
-//     $sql = 'INSERT INTO Post_Photo (user_id, photo_id) VALUES (:user_id, :photo_id)';
-//     try {
-//         $db = getDB();
-//         $stmt = $db->prepare($sql);
-//         $stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
-//         $stmt->bindParam(":photo_id", $photo_id, PDO::PARAM_INT);
-//         $stmt->execute();
-//         $id = $db->lastInsertID();
-//         $db = null;
+function resetTokenForUser($user_id) {
+    $user = getUserAndToken($user_id);
+    $token = base64_encode(md5($user['username'].microtime()));
 
-//         return getVote($id);
-//     } catch(PDOException $e) {
-//         return array('error' => $e->getMessage()); 
-//     }
-// }
+    $sql = 'UPDATE User set token = :token WHERE id = :user_id';
+    try {
+        $db = getDB();
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(":token", $token, PDO::PARAM_STR, 255);
+        $stmt->bindParam(":user_id", $user_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $db = null;
+
+        $user = getUserAndToken($user_id);
+
+        return $user;
+    } catch(PDOException $e) {
+        return array('error' => $e->getMessage()); 
+    }
+}
 
 ?>

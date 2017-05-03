@@ -4,3 +4,76 @@
 [29-Apr-2017 19:32:11 UTC] PHP Notice:  Undefined index: profile_picture_url in /home/blueligh/public_html/pollee/index.php on line 75
 [29-Apr-2017 19:40:54 UTC] PHP Notice:  Undefined index: profile_picture_url in /home/blueligh/public_html/pollee/index.php on line 75
 [29-Apr-2017 19:44:12 UTC] PHP Notice:  Undefined variable: vote in /home/blueligh/public_html/pollee/functions.php on line 150
+[01-May-2017 02:45:50 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home/blueligh/public_html/pollee/functions.php on line 643
+[01-May-2017 02:46:19 UTC] PHP Notice:  Undefined index: user_id in /home/blueligh/public_html/pollee/index.php on line 199
+[01-May-2017 02:46:19 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/blueligh/public_html/pollee/functions.php on line 658
+[01-May-2017 02:46:19 UTC] PHP Notice:  Use of undefined constant user - assumed 'user' in /home/blueligh/public_html/pollee/functions.php on line 661
+[01-May-2017 02:46:37 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/blueligh/public_html/pollee/functions.php on line 658
+[01-May-2017 02:46:37 UTC] PHP Notice:  Use of undefined constant user - assumed 'user' in /home/blueligh/public_html/pollee/functions.php on line 661
+[01-May-2017 02:47:41 UTC] PHP Notice:  Use of undefined constant user - assumed 'user' in /home/blueligh/public_html/pollee/functions.php on line 662
+[01-May-2017 03:06:16 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:16 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:17 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:17 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:18 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:18 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:18 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:18 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:24 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:24 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:24 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:24 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:24 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:06:25 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:07:33 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:11:27 UTC] PHP Fatal error:  Cannot use object of type Slim\Http\Request as array in /home/blueligh/public_html/pollee/index.php on line 19
+[01-May-2017 03:12:14 UTC] PHP Fatal error:  Call to undefined method Slim\Http\Request::getPath() in /home/blueligh/public_html/pollee/index.php on line 19
+[01-May-2017 03:14:17 UTC] PHP Fatal error:  Call to undefined method Slim\Http\Request::getPath() in /home/blueligh/public_html/pollee/index.php on line 19
+[01-May-2017 03:15:32 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:16:05 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:16:48 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/blueligh/public_html/pollee/index.php on line 22
+[01-May-2017 03:16:57 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:17:18 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:18:49 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:20:36 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:20:49 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:21:04 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:22:34 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:22:57 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/blueligh/public_html/pollee/index.php on line 22
+[01-May-2017 03:23:05 UTC] PHP Notice:  Array to string conversion in /home/blueligh/public_html/pollee/functions.php on line 78
+[01-May-2017 03:25:52 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/blueligh/public_html/pollee/index.php on line 17
+[01-May-2017 03:43:27 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 202
+[01-May-2017 03:43:27 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 203
+[01-May-2017 03:47:07 UTC] PHP Notice:  Undefined index: user_id in /home/blueligh/public_html/pollee/index.php on line 154
+[01-May-2017 03:47:07 UTC] PHP Notice:  Undefined index: title in /home/blueligh/public_html/pollee/index.php on line 154
+[01-May-2017 03:47:08 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 202
+[01-May-2017 03:47:08 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 203
+[01-May-2017 03:58:28 UTC] PHP Notice:  Undefined index: username in /home/blueligh/public_html/pollee/index.php on line 119
+[01-May-2017 03:58:28 UTC] PHP Notice:  Undefined index: password in /home/blueligh/public_html/pollee/index.php on line 119
+[01-May-2017 03:59:05 UTC] PHP Notice:  Undefined index: username in /home/blueligh/public_html/pollee/index.php on line 119
+[01-May-2017 03:59:05 UTC] PHP Notice:  Undefined index: password in /home/blueligh/public_html/pollee/index.php on line 119
+[01-May-2017 04:11:26 UTC] PHP Notice:  Undefined index: username in /home/blueligh/public_html/pollee/index.php on line 117
+[01-May-2017 04:11:26 UTC] PHP Notice:  Undefined index: password in /home/blueligh/public_html/pollee/index.php on line 117
+[01-May-2017 04:11:26 UTC] PHP Notice:  Undefined index: username in /home/blueligh/public_html/pollee/index.php on line 118
+[01-May-2017 04:11:26 UTC] PHP Notice:  Undefined index: password in /home/blueligh/public_html/pollee/index.php on line 118
+[01-May-2017 04:11:41 UTC] PHP Notice:  Undefined index: username in /home/blueligh/public_html/pollee/index.php on line 117
+[01-May-2017 04:11:41 UTC] PHP Notice:  Undefined index: password in /home/blueligh/public_html/pollee/index.php on line 117
+[01-May-2017 04:11:41 UTC] PHP Notice:  Undefined index: username in /home/blueligh/public_html/pollee/index.php on line 118
+[01-May-2017 04:11:41 UTC] PHP Notice:  Undefined index: password in /home/blueligh/public_html/pollee/index.php on line 118
+[01-May-2017 04:13:59 UTC] PHP Notice:  Undefined index: username in /home/blueligh/public_html/pollee/index.php on line 117
+[01-May-2017 04:13:59 UTC] PHP Notice:  Undefined index: password in /home/blueligh/public_html/pollee/index.php on line 117
+[01-May-2017 04:13:59 UTC] PHP Notice:  Undefined index: username in /home/blueligh/public_html/pollee/index.php on line 118
+[01-May-2017 04:13:59 UTC] PHP Notice:  Undefined index: password in /home/blueligh/public_html/pollee/index.php on line 118
+[01-May-2017 04:28:28 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/blueligh/public_html/pollee/index.php on line 143
+[01-May-2017 04:28:31 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/blueligh/public_html/pollee/index.php on line 143
+[01-May-2017 04:51:00 UTC] PHP Fatal error:  Call to undefined method Slim\Http\Request::getAttrubute() in /home/blueligh/public_html/pollee/index.php on line 143
+[01-May-2017 04:51:01 UTC] PHP Fatal error:  Call to undefined method Slim\Http\Request::getAttrubute() in /home/blueligh/public_html/pollee/index.php on line 143
+[01-May-2017 04:51:30 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 202
+[01-May-2017 04:51:30 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 203
+[01-May-2017 04:51:30 UTC] PHP Fatal error:  Call to undefined method Slim\Http\Response::withAttribute() in /home/blueligh/public_html/pollee/index.php on line 29
+[01-May-2017 04:53:49 UTC] PHP Fatal error:  Call to undefined method Slim\Http\Request::getAttrubute() in /home/blueligh/public_html/pollee/index.php on line 143
+[01-May-2017 04:53:55 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 202
+[01-May-2017 04:53:56 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 203
+[01-May-2017 04:55:54 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 202
+[01-May-2017 04:55:54 UTC] PHP Notice:  Undefined index: id in /home/blueligh/public_html/pollee/functions.php on line 203
+[01-May-2017 04:56:38 UTC] PHP Fatal error:  Call to undefined method Slim\Http\Request::getAttrubute() in /home/blueligh/public_html/pollee/index.php on line 143

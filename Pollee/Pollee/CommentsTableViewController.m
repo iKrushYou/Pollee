@@ -115,7 +115,8 @@
 }
 
 - (void)keyboardDidShow:(NSNotification *)notification {
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+//    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     
     [UIView animateWithDuration:0.1 animations:^{
         self.commentBottomConstraint.constant = keyboardSize.height - _commentView.frame.size.height;

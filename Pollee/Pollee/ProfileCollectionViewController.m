@@ -13,6 +13,7 @@
 #import "PLPost.h"
 #import "FollowTableViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "EditProfileTableViewController.h"
 
 @interface ProfileCollectionViewController () {
     NSArray * posts;
@@ -155,16 +156,6 @@ static CGFloat cellWidth;
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -241,9 +232,10 @@ static CGFloat cellWidth;
 - (void)uploadImage:(UIImage *)image {
     NSData * imageData = UIImageJPEGRepresentation(image, 0.5);
     
-    NSString *path = [NSString stringWithFormat:@"%@/upload", [APIClient sharedInstance].baseURL];
+    NSString * path = [[APIClient baseUrl] stringByAppendingString:@"upload"];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager.requestSerializer setValue:[APIClient sharedInstance].user.token forHTTPHeaderField:@"Token"];
     [manager POST:path parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         [formData appendPartWithFileData:imageData name:@"newfile" fileName:@"newfile.jpg" mimeType:@"image/jpeg"];
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -257,6 +249,7 @@ static CGFloat cellWidth;
 }
 
 - (void)setProfilePicture:(NSString *)profilePictureUrl {
+    profilePictureUrl = [[APIClient baseUrl] stringByAppendingString:profilePictureUrl];
     NSDictionary * parameters = @{
                                   @"profile_picture_url" : profilePictureUrl
                                   };
